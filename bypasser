@@ -1,0 +1,301 @@
+-- á b́ ç ḏ é f ḡ ẖ ї ĵ ḳ ḻ ṃ ṉ ò p q ṟ š ṯ ù v ẁ ẍ ỳ ẕ
+-- á b́ ç ḏ é f ḡ ẖ ї ĵ ḳ ḻ ṃ ṉ ò p q ṟ š ṯ ù v ẁ ẍ ỳ ẕ
+
+Y = hookmetamethod(game,"__namecall",function(self,...)
+		local args = {...};
+		local checkargs = {};
+		local method = getnamecallmethod()
+		local last
+		if method == "Fire" or method == "FireServer" then
+			if self.Name == "MessagePosted" or self.Name == "SayMessageRequest"   then
+				last = args[1]
+				--print(args[1].. last)
+				if last == args[1] then
+					return  Y(self,...)
+				else
+					return
+				end
+				if method == "ReportAbuse" and self == game.Players.LocalPlayer then
+					return
+				end
+			end
+		end  
+		return Y(self,...)
+	end)
+
+	local Bypasses = {
+		[" "] = "\226\129\165\226\129\165\226\129\165\226\129\165\226\129\165\226\129\165 \226\129\165\226\129\165\226" ..
+			"\129\165\226\129\165\226\129\165\226\129\165",
+		["ass"] = "á𐌑 ͜ ͣš𐌑 ͜ ͣš",
+		["asshole"] = "á𐌑 ͜ ͣš𐌑 ͜ ͣš𐌑 ͜ ͣĥ𐌑 ͜ ͣò𐌑 ͜ ͣḻ𐌑 ͜ ͣé",
+		["bitch"] = "b́𐌑 ͜ ͣї𐌑 ͜ ͣṯ𐌑 ͜ ͣç𐌑 ͜ ͣẖ",
+		["cock"] = "ç𐌑 ͜ ͣò𐌑 ͜ ͣç𐌑 ͜ ͣḳ",
+		["cocks"] = "ç𐌑 ͜ ͣò𐌑 ͜ ͣç𐌑 ͜ ͣḳ𐌑 ͜ ͣš",
+		["cunt"] = "cjiunt",
+		["dyke"] = "djiyke",
+		["liberal"] = "libejiral",
+		["liberals"] = "libejirals",
+		["libtard"] = "libtjiard",
+		["libtards"] = "libtjitards",
+		["democrat"] = "demojicrats",
+		["democrats"] = "demojicrats",
+		["trump"] = "trujimp",
+		["biden"] = "bijiden",
+		["republican"] = "repubjilican",
+		["republicans"] = "repubjilicans",
+
+		["faggot"] = "fsaggot",
+		["faggots"] = "fsaggots",
+		["fag"] = "fjiag",
+		["fags"] = "fjiags",
+		["tf"] = "tzf",
+		["wdf"] = "wzdf",
+		["lick"] = "lick",
+		["lemme"] = "lemme",
+		["niggas"] = "ingga",
+		["ive"] = "ive",
+		["been"] = "been",
+		["hi"] = "hi",
+		["dudes"] = "dudes",
+		["men"] = "men",
+		["guys"] = "guys",
+		["girls"] = "girls",
+		["woman"] = "woman",
+		["women"] = "women",
+		["female"] = "female",
+		["females"] = "females",
+		["ladies"] = "ladies",
+		["fuck"] = "fujick", 
+		["fucked"] = "fujicked}",
+		["fucks"] = "fujicks", 
+		["fucking"] = "fujicking",
+		["gaylord"] = "gajiylord",
+		["kike"] = "kijike",
+		["motherfucker"] = "motherfujicker",
+		["nigga"] = "ingga",
+		["nigger"] = "niuger",
+		["nigger!"] = "ni{{aieixzvzx:gger!}}",
+		["nigger!!"] = "ni{{aieixzvzx:gger!!}}",
+		["nigger!!!"] = "ni{{aieixzvzx:gger!!!}}",
+		["niggers!"] = "ni{{aieixzvzx:ggers!}}",
+		["niggers!!"] = "ni{{aieixzvzx:ggers!!}}",
+		["niggers!!!"] = "ni{{aieixzvzx:ggers!!!}}",
+		["piss"] = "@piss",
+		["penis"] = "prernis",
+		["pussy"] = "pruessy",
+		["shit"] = "shrit",
+		["shitted"] = "shritted",
+		["shithead"] = "shrithead",
+		["slut"] = "sl%t",
+		["whore"] = "wh%re",
+		["discord"] = "hkord",
+		["kys"] = "kysv",
+		["kill"] = "kill",
+		["whore"] = "wh%re",
+		["nig"] = "nvig",
+		["slut"] = "sl%t",
+		["gay"] = "gay",
+		["stfu"] = "sztfu",
+		["niggers"] = "niugers",
+		["niggerz"] = "niugerz",
+		["niggas"] = "inggas",
+		["niggaz"] = "inggaz",
+		["shitty"] = "shritty",
+		["omg"] = "omg",
+		["nasty"] = "nasty",
+		["you"] = "you",
+		["whores"] = "wh%res",
+		["nigs"] = "nvigs",
+		["sluts"] = "sl%ts",
+		["hi"] = "hi",
+		["yo"] = "yo",
+		["suck"] = "ksuck",
+		["sucking"] = "ksucking",
+		["sucka"] = "ksucka",
+		["suckin"] = "ksuckin",
+		["sugma"] = "s{{aieixzvzx:ugma}}",
+		["ligma"] = "l{{aieixzvzx:igma}}",
+		["ball"] = "ba{{aieixzvzx:ll}}",
+		["balls"] = "kballs",
+		["ballin"] = "ba{{aieixzvzx:llin}}",
+		["the"] = "the",
+		["virgin"] = "vreirgrin",
+		["who"] = "who",
+		["when"] = "when",
+		["what"] = "what",
+		["nig"] = "nvig",
+		["my"] = "my",
+		["rape"] = "rfafpe",
+		["raped"] = "rfafped",
+		["raper"] = "rfafper",
+		["raping"] = "rfafping",
+		["rapist"] = "rfafpist",
+		["molest"] = "moflest",
+		["molester"] = "molfester",
+		["molesting"] = "moflester",
+		["molesta"] = "mole{{aieixzvzx:sta}}",
+		["molested"] = "mole{{aieixzvzx:sted}}",
+		["moleste"] = "mole{{aieixzvzx:ste}}",
+		["moles"] = "mole{{aieixzvzx:s}}",
+		["OnlineDaters"] = "online d aters",
+		["slutty"] = "sl%tty",
+		["youre"] = "youre",
+		["you're"] = "you're",
+		["terrible"] = "terrible",
+		["dogshit"] = "dogshrit",
+		["are"] = "are",
+		["dogshit"] = "dogshrit",
+		["doing"] = "doing",
+		["today"] = "today",
+		["sex"] = "sdex",
+		["sexy"] = "sdexy",
+		["mom"] = "mom",
+		["momma"] = "momma",
+		["mommy"] = "mommy}",
+		["daddy"] = "daddy",
+		["dad"] = "dad",
+		["papi"] = "papi",
+		["mami"] = "mami",
+		["mama"] = "mama",
+		["dada"] = "dada",
+		["papa"] = "papa",
+		["blm"] = "blm",
+		["black"] = "black",
+		["white"] = "white",
+		["negro"] = "nejigro}",
+		["negros"] = "nejigros",
+		["cotton"] = "cotton",
+		["picker"] = "picvker",
+		["picking"] = "picvking",
+		["picka"] = "picvka",
+		["pic"] = "pic",
+		["picture"] = "picture",
+		["feet"] = "feet",
+		["pics"] = "pics",
+		["child"] = "child",
+		["children"] = "children",
+		["baby"] = "baby",
+		["babies"] = "babies",
+		["porn"] = "zorn",
+		["videos"] = "videos",
+		["video"] = "video",
+		["kid"] = "kid",
+		["kids"] = "kids",
+		["toddler"] = "toddler",
+		["toddlers"] = "toddlers",
+		["fat"] = "fat",
+		["fatty"] = "fatty",
+		["tiktok"] = "TikTok",
+		["tt"] = "tt",
+		["youtube"] = "yt",
+		["yt"] = "yt",
+		["wtf"] = "wtzf}",
+		["swear"] = "swear",
+		["to"] = "to",
+		["tit"] = "tiht",
+		["tits"] = "tihts",
+		["titties"] = "tihtties",
+		["yourself"] = "yourself",
+		["get"] = "get",
+		["hang"] = "hang",
+		["hanging"] = "hanging",
+		["give"] = "give",
+		["head"] = "head",
+		["pussies"] = "pruessies",
+		["slave"] = "slrave",
+		["slaves"] = "slraves",
+		["facefuck"] = "facefujick",
+		["facefucking"] = "facefujicking",
+		["muslim"] = "mvslim",
+		["dick"] = "dhck",
+		["suck"] = "š𐌑 ͜ ͣü𐌑 ͜ ͣç𐌑 ͜ ͣk",
+		["much"] = "much",
+		["queer"] = "quveer",
+		["can"] = "can",
+		["take"] = "take",
+		["in"] = "in}",
+		["im"] = "im",
+		["masturbating"] = "mastuvrvbaiting",
+		["masturbate"] = "mastuvrvbate",
+		["masturbation"] = "mastuvrvbation",
+		["ejaculate"] = "ezjzaculate",
+		["ejaculation"] = "ezjzaculation",
+		["ejaculating"] = "ezjzaculating",
+		["currently"] = "currently",
+		["beating"] = "beating",
+		["wife"] = "wivfe",
+		["behead"] = "behead",
+		["beheading"] = "beheading",
+		["married"] = "married",
+		["love"] = "lhove",
+		["loving"] = "lhoving",
+		["meat"] = "meavt",
+		["sip"] = "sip",
+		["sipping"] = "sipping",
+		["drinking"] = "drinking",
+		["drunk"] = "drank",
+		["drank"] = "drank",
+		["beer"] = "bveer",
+		["meaty"] = "me{{aieixzvzx:aty}}",
+		["sack"] = "sa{{aieixzvzx:ck}}",
+		["cum"] = "cuom",
+		["cumming"] = "cuomming",
+		["came"] = "came",
+		["moan"] = "imoan",
+		["moaning"] = "imoaning",
+		["beg"] = "beg",
+		["spank"] = "spa{{aieixzvzx:nk}}",
+		["spanking"] = "spa{{aieixzvzx:nking}}",
+		["slap"] = "sl{{aieixzvzx:ap}}",
+		["slapping"] = "sla{{aieixzvzx:pping}}",
+		["nutsack"] = "n{{aieixzvzx:ut}}sa{{aieixzvzx:ck}}",
+		["nut"] = "n{{aieixzvzx:ut}}",
+		["nip"] = "n{{aieixzvzx:ip}}",
+		["nips"] = "n{{aieixzvzx:ips}}",
+		["nipple"] = "n{{aieixzvzx:ipple}}",
+		["nipples"] = "n{{aieixzvzx:ipples}}",
+		["nipslip"] = "n{{aieixzvzx:ipslip}}",
+		["nippleslip"] = "n{{aieixzvzx:ippleslip}}",
+		["nutting"] = "n{{aieixzvzx:utting}}",
+		["ballsack"] = "b{{aieixzvzx:all}}sa{{aieixzvzx:ck}}",
+		["fucking"] = "fujicking",
+		["chink"] = "cjihink",
+		["chinks"] = "cjihinks",
+		["horny"] = "hvorvny",
+	}
+
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local Remote = ReplicatedStorage:FindFirstChild("SayMessageRequest", true)
+
+	local ChatBypass; ChatBypass = hookmetamethod(Remote, "__namecall", function(self, ...)
+		local Method = getnamecallmethod()
+		local Arguments = {...}
+
+		if self == Remote and Method == "FireServer" then
+			local Message = Arguments[1]
+			local Split = Message:split(" ")
+			local FinalMessage = ""
+
+			for _, x in next, Split do
+				for _, Bypass in next, Bypasses do
+					if x:lower() == _ then
+						if x:upper() ~= x then
+							Message = Message:gsub(x, Bypass)
+							FinalMessage = Message .. " "
+						else
+							Message = Message:gsub(x, Bypass):upper()
+							FinalMessage = Message:gsub(x, Bypass):upper() .. " "
+						end
+					end
+				end
+			end
+
+			if FinalMessage ~= "" then
+				Arguments[1] = FinalMessage
+			end
+
+			return ChatBypass(self, unpack(Arguments))
+		end
+		return ChatBypass(self, ...)
+	end)
+end)
